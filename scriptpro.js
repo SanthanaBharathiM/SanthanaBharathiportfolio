@@ -47,7 +47,7 @@ window.onscroll = () => {
     
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement. scrollHeight);
 }
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyUZz0_Pb-T2-6vXCom58NjP23BeARwUe0w00WwPZH9GT0YeVPlxC5HJ58t09ysaDk/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz1jwh-Hd7OmaG5Q_pz9q5vgWqpa2J1zwkYPtskQXQorFoInXn3v8mZPMswDtKI5qT_Hw/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
 
