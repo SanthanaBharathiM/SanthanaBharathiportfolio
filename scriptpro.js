@@ -47,6 +47,24 @@ window.onscroll = () => {
     
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement. scrollHeight);
 }
+
+function handleSubmit(event) {
+    event.preventDefault(); // Prevent default temporarily to control submission
+    const form = event.target;
+    const msg = document.getElementById("msg");
+
+    // Show success message
+    msg.innerHTML = "Message sent successfully ✓";
+    
+    // Submit the form to the Google Apps Script
+    form.submit();
+
+    // Clear the message after 5 seconds and reset the form
+    setTimeout(() => {
+        msg.innerHTML = "";
+        form.reset();
+    }, 5000);
+}
 // const scriptURL = 'https://script.google.com/macros/s/AKfycbyTklRtm6l6cwL-8nvBx-ZSVuxFRSoEs1c6A3unJuw7x9jl3-hXTnxny5Xlxz3X51DQLA/exec'
 // const form = document.forms['submit-to-google-sheet']
 // const msg = document.getElementById("msg")
